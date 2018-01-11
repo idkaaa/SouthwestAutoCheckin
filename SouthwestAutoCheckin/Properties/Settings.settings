@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SouthwestAutoCheckin.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TestConfirmationPageAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.southwest.com/flight/lookup-air-reservation.html?default=cc</Value>
+    </Setting>
+    <Setting Name="TestConfirmationNumberFieldHtmlId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">confirmationNumber</Value>
+    </Setting>
+    <Setting Name="TestConfirmationFirstNameFieldHtmlId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">passengerFirstName</Value>
+    </Setting>
+    <Setting Name="TestConfirmationLastNameFieldHtmlId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">passengerLastName</Value>
+    </Setting>
+    <Setting Name="TestConfirmationSubmitButtonFieldHtmlId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">form-mixin--submit-button</Value>
+    </Setting>
+    <Setting Name="TestConfirmationErrorHtmlSelector" Type="System.String" Scope="User">
+      <Value Profile="(Default)">li.page-error--message</Value>
+    </Setting>
+    <Setting Name="ScheduledCheckInJsonDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn\ScheduledCheckIns</Value>
+    </Setting>
+    <Setting Name="SouthwestCheckInBaseDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn</Value>
+    </Setting>
+    <Setting Name="FirefoxBinaryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn\FirefoxPortable\FirefoxPortable.exe</Value>
+    </Setting>
+    <Setting Name="TestDataFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn\TestData.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
