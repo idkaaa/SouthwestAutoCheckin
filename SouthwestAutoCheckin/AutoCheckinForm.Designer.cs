@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.c_DateTimePickerCheckinTime = new System.Windows.Forms.DateTimePicker();
-            this.c_LabelCheckInTime = new System.Windows.Forms.Label();
+            this.c_DateTimePickerFlightTime = new System.Windows.Forms.DateTimePicker();
+            this.c_LabelFlightTime = new System.Windows.Forms.Label();
             this.c_TextBoxConfirmationNumber = new System.Windows.Forms.TextBox();
             this.c_LabelConfirmationNumber = new System.Windows.Forms.Label();
             this.c_LabelFirstName = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.c_LabelEmail = new System.Windows.Forms.Label();
             this.c_TextBoxEmail = new System.Windows.Forms.TextBox();
             this.c_LabelTestResults = new System.Windows.Forms.Label();
-            this.c_LabelCheckInDate = new System.Windows.Forms.Label();
-            this.c_DateTimePickerCheckinDate = new System.Windows.Forms.DateTimePicker();
+            this.c_LabelFlightDate = new System.Windows.Forms.Label();
+            this.c_DateTimePickerFlightDate = new System.Windows.Forms.DateTimePicker();
             this.c_TimerCountDown = new System.Windows.Forms.Timer(this.components);
             this.c_LabelTimeLeft = new System.Windows.Forms.Label();
             this.c_LabelPhoneNumber = new System.Windows.Forms.Label();
@@ -52,24 +52,24 @@
             this.c_TimerCheckinRetryInterval = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // c_DateTimePickerCheckinTime
+            // c_DateTimePickerFlightTime
             // 
-            this.c_DateTimePickerCheckinTime.Enabled = false;
-            this.c_DateTimePickerCheckinTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.c_DateTimePickerCheckinTime.Location = new System.Drawing.Point(8, 440);
-            this.c_DateTimePickerCheckinTime.Name = "c_DateTimePickerCheckinTime";
-            this.c_DateTimePickerCheckinTime.ShowUpDown = true;
-            this.c_DateTimePickerCheckinTime.Size = new System.Drawing.Size(133, 22);
-            this.c_DateTimePickerCheckinTime.TabIndex = 0;
+            this.c_DateTimePickerFlightTime.Enabled = false;
+            this.c_DateTimePickerFlightTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.c_DateTimePickerFlightTime.Location = new System.Drawing.Point(8, 440);
+            this.c_DateTimePickerFlightTime.Name = "c_DateTimePickerFlightTime";
+            this.c_DateTimePickerFlightTime.ShowUpDown = true;
+            this.c_DateTimePickerFlightTime.Size = new System.Drawing.Size(133, 22);
+            this.c_DateTimePickerFlightTime.TabIndex = 8;
             // 
-            // c_LabelCheckInTime
+            // c_LabelFlightTime
             // 
-            this.c_LabelCheckInTime.AutoSize = true;
-            this.c_LabelCheckInTime.Location = new System.Drawing.Point(7, 421);
-            this.c_LabelCheckInTime.Name = "c_LabelCheckInTime";
-            this.c_LabelCheckInTime.Size = new System.Drawing.Size(93, 16);
-            this.c_LabelCheckInTime.TabIndex = 1;
-            this.c_LabelCheckInTime.Text = "Checkin Time:";
+            this.c_LabelFlightTime.AutoSize = true;
+            this.c_LabelFlightTime.Location = new System.Drawing.Point(7, 421);
+            this.c_LabelFlightTime.Name = "c_LabelFlightTime";
+            this.c_LabelFlightTime.Size = new System.Drawing.Size(77, 16);
+            this.c_LabelFlightTime.TabIndex = 1;
+            this.c_LabelFlightTime.Text = "Flight Time:";
             // 
             // c_TextBoxConfirmationNumber
             // 
@@ -77,7 +77,7 @@
             this.c_TextBoxConfirmationNumber.MaxLength = 25;
             this.c_TextBoxConfirmationNumber.Name = "c_TextBoxConfirmationNumber";
             this.c_TextBoxConfirmationNumber.Size = new System.Drawing.Size(297, 22);
-            this.c_TextBoxConfirmationNumber.TabIndex = 2;
+            this.c_TextBoxConfirmationNumber.TabIndex = 3;
             // 
             // c_LabelConfirmationNumber
             // 
@@ -103,7 +103,7 @@
             this.c_TextBoxFirstName.MaxLength = 25;
             this.c_TextBoxFirstName.Name = "c_TextBoxFirstName";
             this.c_TextBoxFirstName.Size = new System.Drawing.Size(297, 22);
-            this.c_TextBoxFirstName.TabIndex = 4;
+            this.c_TextBoxFirstName.TabIndex = 1;
             // 
             // c_LabelLastName
             // 
@@ -120,14 +120,14 @@
             this.c_TextBoxLastName.MaxLength = 25;
             this.c_TextBoxLastName.Name = "c_TextBoxLastName";
             this.c_TextBoxLastName.Size = new System.Drawing.Size(297, 22);
-            this.c_TextBoxLastName.TabIndex = 6;
+            this.c_TextBoxLastName.TabIndex = 2;
             // 
             // c_ButtonTest
             // 
             this.c_ButtonTest.Location = new System.Drawing.Point(12, 164);
             this.c_ButtonTest.Name = "c_ButtonTest";
             this.c_ButtonTest.Size = new System.Drawing.Size(120, 41);
-            this.c_ButtonTest.TabIndex = 8;
+            this.c_ButtonTest.TabIndex = 4;
             this.c_ButtonTest.Text = "Test";
             this.c_ButtonTest.UseVisualStyleBackColor = true;
             this.c_ButtonTest.Click += new System.EventHandler(this.Handle_ButtonTest_Click);
@@ -162,6 +162,7 @@
             this.c_LabelEmail.Size = new System.Drawing.Size(241, 16);
             this.c_LabelEmail.TabIndex = 14;
             this.c_LabelEmail.Text = "Confirmation E-Mail Address (Optional):";
+            this.c_LabelEmail.Visible = false;
             // 
             // c_TextBoxEmail
             // 
@@ -170,7 +171,8 @@
             this.c_TextBoxEmail.MaxLength = 40;
             this.c_TextBoxEmail.Name = "c_TextBoxEmail";
             this.c_TextBoxEmail.Size = new System.Drawing.Size(297, 22);
-            this.c_TextBoxEmail.TabIndex = 13;
+            this.c_TextBoxEmail.TabIndex = 5;
+            this.c_TextBoxEmail.Visible = false;
             // 
             // c_LabelTestResults
             // 
@@ -183,23 +185,23 @@
             this.c_LabelTestResults.Text = "Not Tested...";
             this.c_LabelTestResults.Visible = false;
             // 
-            // c_LabelCheckInDate
+            // c_LabelFlightDate
             // 
-            this.c_LabelCheckInDate.AutoSize = true;
-            this.c_LabelCheckInDate.Location = new System.Drawing.Point(9, 367);
-            this.c_LabelCheckInDate.Name = "c_LabelCheckInDate";
-            this.c_LabelCheckInDate.Size = new System.Drawing.Size(91, 16);
-            this.c_LabelCheckInDate.TabIndex = 18;
-            this.c_LabelCheckInDate.Text = "Checkin Date:";
-            this.c_LabelCheckInDate.Click += new System.EventHandler(this.c_LabelCheckInDate_Click);
+            this.c_LabelFlightDate.AutoSize = true;
+            this.c_LabelFlightDate.Location = new System.Drawing.Point(9, 367);
+            this.c_LabelFlightDate.Name = "c_LabelFlightDate";
+            this.c_LabelFlightDate.Size = new System.Drawing.Size(75, 16);
+            this.c_LabelFlightDate.TabIndex = 18;
+            this.c_LabelFlightDate.Text = "Flight Date:";
+            this.c_LabelFlightDate.Click += new System.EventHandler(this.c_LabelCheckInDate_Click);
             // 
-            // c_DateTimePickerCheckinDate
+            // c_DateTimePickerFlightDate
             // 
-            this.c_DateTimePickerCheckinDate.Enabled = false;
-            this.c_DateTimePickerCheckinDate.Location = new System.Drawing.Point(10, 386);
-            this.c_DateTimePickerCheckinDate.Name = "c_DateTimePickerCheckinDate";
-            this.c_DateTimePickerCheckinDate.Size = new System.Drawing.Size(302, 22);
-            this.c_DateTimePickerCheckinDate.TabIndex = 17;
+            this.c_DateTimePickerFlightDate.Enabled = false;
+            this.c_DateTimePickerFlightDate.Location = new System.Drawing.Point(10, 386);
+            this.c_DateTimePickerFlightDate.Name = "c_DateTimePickerFlightDate";
+            this.c_DateTimePickerFlightDate.Size = new System.Drawing.Size(302, 22);
+            this.c_DateTimePickerFlightDate.TabIndex = 7;
             // 
             // c_TimerCountDown
             // 
@@ -223,6 +225,7 @@
             this.c_LabelPhoneNumber.Size = new System.Drawing.Size(198, 16);
             this.c_LabelPhoneNumber.TabIndex = 23;
             this.c_LabelPhoneNumber.Text = "Confirmation Phone # (Optional):";
+            this.c_LabelPhoneNumber.Visible = false;
             // 
             // c_TextBoxPhoneNumber
             // 
@@ -231,7 +234,8 @@
             this.c_TextBoxPhoneNumber.MaxLength = 40;
             this.c_TextBoxPhoneNumber.Name = "c_TextBoxPhoneNumber";
             this.c_TextBoxPhoneNumber.Size = new System.Drawing.Size(297, 22);
-            this.c_TextBoxPhoneNumber.TabIndex = 22;
+            this.c_TextBoxPhoneNumber.TabIndex = 6;
+            this.c_TextBoxPhoneNumber.Visible = false;
             // 
             // c_TimerCheckinRetryInterval
             // 
@@ -246,8 +250,8 @@
             this.Controls.Add(this.c_LabelPhoneNumber);
             this.Controls.Add(this.c_TextBoxPhoneNumber);
             this.Controls.Add(this.c_LabelTimeLeft);
-            this.Controls.Add(this.c_LabelCheckInDate);
-            this.Controls.Add(this.c_DateTimePickerCheckinDate);
+            this.Controls.Add(this.c_LabelFlightDate);
+            this.Controls.Add(this.c_DateTimePickerFlightDate);
             this.Controls.Add(this.c_LabelTestResults);
             this.Controls.Add(this.c_LabelEmail);
             this.Controls.Add(this.c_TextBoxEmail);
@@ -260,8 +264,8 @@
             this.Controls.Add(this.c_TextBoxFirstName);
             this.Controls.Add(this.c_LabelConfirmationNumber);
             this.Controls.Add(this.c_TextBoxConfirmationNumber);
-            this.Controls.Add(this.c_LabelCheckInTime);
-            this.Controls.Add(this.c_DateTimePickerCheckinTime);
+            this.Controls.Add(this.c_LabelFlightTime);
+            this.Controls.Add(this.c_DateTimePickerFlightTime);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -275,8 +279,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker c_DateTimePickerCheckinTime;
-        private System.Windows.Forms.Label c_LabelCheckInTime;
+        private System.Windows.Forms.DateTimePicker c_DateTimePickerFlightTime;
+        private System.Windows.Forms.Label c_LabelFlightTime;
         private System.Windows.Forms.TextBox c_TextBoxConfirmationNumber;
         private System.Windows.Forms.Label c_LabelConfirmationNumber;
         private System.Windows.Forms.Label c_LabelFirstName;
@@ -289,8 +293,8 @@
         private System.Windows.Forms.Label c_LabelEmail;
         private System.Windows.Forms.TextBox c_TextBoxEmail;
         private System.Windows.Forms.Label c_LabelTestResults;
-        private System.Windows.Forms.Label c_LabelCheckInDate;
-        private System.Windows.Forms.DateTimePicker c_DateTimePickerCheckinDate;
+        private System.Windows.Forms.Label c_LabelFlightDate;
+        private System.Windows.Forms.DateTimePicker c_DateTimePickerFlightDate;
         private System.Windows.Forms.Timer c_TimerCountDown;
         private System.Windows.Forms.Label c_LabelTimeLeft;
         private System.Windows.Forms.Label c_LabelPhoneNumber;

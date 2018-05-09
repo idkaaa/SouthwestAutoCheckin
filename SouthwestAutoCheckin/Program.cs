@@ -32,11 +32,25 @@ namespace SouthwestAutoCheckin
         /// the web browser driver.
         /// </summary>
         private static WebDriver p_WebDriver { get; set; }
+        public static void print(IEnumerable<string> x)
+        {
+            foreach (string s in x)
+            {
+                Log.Trace(s);
+            }
+        }
 
         [STAThread]
         static int Main(string[] args)
         {
-            bool hasArguments = args.Length != 0;
+            string[] x = new string[] { "a", "c", "b" };
+            IEnumerable<string> y = x;
+            Log.Trace("Unsorted IEnumerable");
+            print(y);
+            Log.Trace("Sorted IEnumerable");
+            print(y.OrderBy(r => r));
+        
+        bool hasArguments = args.Length != 0;
             if (hasArguments == false)
             {
                 Application.EnableVisualStyles();
