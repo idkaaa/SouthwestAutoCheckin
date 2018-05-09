@@ -21,16 +21,16 @@
       <Value Profile="(Default)">li.page-error--message</Value>
     </Setting>
     <Setting Name="ScheduledCheckInJsonDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn\ScheduledCheckIns</Value>
+      <Value Profile="(Default)">.\ScheduledCheckIns</Value>
     </Setting>
     <Setting Name="SouthwestCheckInBaseDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn</Value>
+      <Value Profile="(Default)">.\</Value>
     </Setting>
     <Setting Name="FirefoxBinaryPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn\FirefoxPortable\FirefoxPortable.exe</Value>
+      <Value Profile="(Default)">.\FirefoxPortable\FirefoxPortable.exe</Value>
     </Setting>
     <Setting Name="TestDataFilePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\Server01\sales\Telscreen\Schedule Plans\EyeRes Trips\SouthwestAutoCheckIn\TestData.txt</Value>
+      <Value Profile="(Default)">.\TestData.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

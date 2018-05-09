@@ -12,7 +12,7 @@ namespace SouthwestAutoCheckin.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -97,8 +97,7 @@ namespace SouthwestAutoCheckin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\Server01\\sales\\Telscreen\\Schedule Plans\\EyeRes Trips\\SouthwestAutoCheckIn\\Sched" +
-            "uledCheckIns")]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\ScheduledCheckIns")]
         public string ScheduledCheckInJsonDirectory {
             get {
                 return ((string)(this["ScheduledCheckInJsonDirectory"]));
@@ -110,7 +109,7 @@ namespace SouthwestAutoCheckin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\Server01\\sales\\Telscreen\\Schedule Plans\\EyeRes Trips\\SouthwestAutoCheckIn")]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\")]
         public string SouthwestCheckInBaseDirectory {
             get {
                 return ((string)(this["SouthwestCheckInBaseDirectory"]));
@@ -122,8 +121,7 @@ namespace SouthwestAutoCheckin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\Server01\\sales\\Telscreen\\Schedule Plans\\EyeRes Trips\\SouthwestAutoCheckIn\\Firef" +
-            "oxPortable\\FirefoxPortable.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\FirefoxPortable\\FirefoxPortable.exe")]
         public string FirefoxBinaryPath {
             get {
                 return ((string)(this["FirefoxBinaryPath"]));
@@ -135,8 +133,7 @@ namespace SouthwestAutoCheckin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\Server01\\sales\\Telscreen\\Schedule Plans\\EyeRes Trips\\SouthwestAutoCheckIn\\TestD" +
-            "ata.txt")]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\TestData.txt")]
         public string TestDataFilePath {
             get {
                 return ((string)(this["TestDataFilePath"]));
