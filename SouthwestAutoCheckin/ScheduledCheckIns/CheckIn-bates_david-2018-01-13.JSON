@@ -1,0 +1,10 @@
+{
+  "p_JsonFilePath": "\\\\Server01\\sales\\Telscreen\\Schedule Plans\\EyeRes Trips\\SouthwestAutoCheckIn\\ScheduledCheckIns\\CheckIn-bates_david-2018-01-13.JSON",
+  "p_FirstName": "david",
+  "p_LastName": "bates",
+  "p_ConfirmationCode": "tset32",
+  "p_CheckInDate": "2018-01-13T09:30:00",
+  "p_EmailAddress": "david.bates@telscreen.com",
+  "p_PhoneNumber": "",
+  "p_TaskStatus": 0
+}

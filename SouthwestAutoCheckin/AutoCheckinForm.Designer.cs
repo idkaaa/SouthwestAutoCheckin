@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.c_DateTimePickerFlightTime = new System.Windows.Forms.DateTimePicker();
-            this.c_LabelFlightTime = new System.Windows.Forms.Label();
             this.c_TextBoxConfirmationNumber = new System.Windows.Forms.TextBox();
             this.c_LabelConfirmationNumber = new System.Windows.Forms.Label();
             this.c_LabelFirstName = new System.Windows.Forms.Label();
@@ -51,25 +49,6 @@
             this.c_TextBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.c_TimerCheckinRetryInterval = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            // 
-            // c_DateTimePickerFlightTime
-            // 
-            this.c_DateTimePickerFlightTime.Enabled = false;
-            this.c_DateTimePickerFlightTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.c_DateTimePickerFlightTime.Location = new System.Drawing.Point(8, 440);
-            this.c_DateTimePickerFlightTime.Name = "c_DateTimePickerFlightTime";
-            this.c_DateTimePickerFlightTime.ShowUpDown = true;
-            this.c_DateTimePickerFlightTime.Size = new System.Drawing.Size(133, 22);
-            this.c_DateTimePickerFlightTime.TabIndex = 8;
-            // 
-            // c_LabelFlightTime
-            // 
-            this.c_LabelFlightTime.AutoSize = true;
-            this.c_LabelFlightTime.Location = new System.Drawing.Point(7, 421);
-            this.c_LabelFlightTime.Name = "c_LabelFlightTime";
-            this.c_LabelFlightTime.Size = new System.Drawing.Size(77, 16);
-            this.c_LabelFlightTime.TabIndex = 1;
-            this.c_LabelFlightTime.Text = "Flight Time:";
             // 
             // c_TextBoxConfirmationNumber
             // 
@@ -197,6 +176,7 @@
             // 
             // c_DateTimePickerFlightDate
             // 
+            this.c_DateTimePickerFlightDate.CustomFormat = "";
             this.c_DateTimePickerFlightDate.Enabled = false;
             this.c_DateTimePickerFlightDate.Location = new System.Drawing.Point(10, 386);
             this.c_DateTimePickerFlightDate.Name = "c_DateTimePickerFlightDate";
@@ -264,8 +244,6 @@
             this.Controls.Add(this.c_TextBoxFirstName);
             this.Controls.Add(this.c_LabelConfirmationNumber);
             this.Controls.Add(this.c_TextBoxConfirmationNumber);
-            this.Controls.Add(this.c_LabelFlightTime);
-            this.Controls.Add(this.c_DateTimePickerFlightTime);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -278,9 +256,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker c_DateTimePickerFlightTime;
-        private System.Windows.Forms.Label c_LabelFlightTime;
         private System.Windows.Forms.TextBox c_TextBoxConfirmationNumber;
         private System.Windows.Forms.Label c_LabelConfirmationNumber;
         private System.Windows.Forms.Label c_LabelFirstName;

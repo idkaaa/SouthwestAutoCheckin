@@ -44,11 +44,11 @@ namespace SouthwestAutoCheckin
         public AutoCheckinForm()
         {
             InitializeComponent();
-            c_LabelFlightTime.Text += $@"({TimeZone.CurrentTimeZone.StandardName}):";
-            c_DateTimePickerFlightTime.Format = DateTimePickerFormat.Time;
+            c_LabelFlightDate.Text += $@"({TimeZone.CurrentTimeZone.StandardName}):";
+            c_DateTimePickerFlightDate.Format = DateTimePickerFormat.Custom;
+            c_DateTimePickerFlightDate.CustomFormat = "h:mm tt dddd d MMM yyyy";
             c_DateTimePickerFlightDate.ShowUpDown = true;
-            c_DateTimePickerFlightDate.Value = DateTime.Today;
-            c_DateTimePickerFlightTime.Value = DateTime.Today;
+            c_DateTimePickerFlightDate.Value = DateTime.Today.AddDays(1);
             //f_GenerateFakeTestCheckin();
         }
 
@@ -62,7 +62,6 @@ namespace SouthwestAutoCheckin
             c_TextBoxFirstName.Text = p_CheckIn.p_FirstName;
             c_TextBoxLastName.Text = p_CheckIn.p_LastName;
             c_DateTimePickerFlightDate.Value = p_CheckIn.p_CheckInDate.Date;
-            c_DateTimePickerFlightTime.Value = p_CheckIn.p_CheckInDate;
             c_TextBoxEmail.Text = p_CheckIn.p_EmailAddress;
             c_TextBoxPhoneNumber.Text = p_CheckIn.p_PhoneNumber;
         }
@@ -116,7 +115,6 @@ namespace SouthwestAutoCheckin
                 //enable optional parameters
                 c_TextBoxEmail.Enabled = true;
                 c_DateTimePickerFlightDate.Enabled = true;
-                c_DateTimePickerFlightTime.Enabled = true;
                 return;
             }
             c_LabelTestResults.Text = "Error: Credential check failed.";
@@ -130,11 +128,15 @@ namespace SouthwestAutoCheckin
         {
             c_ButtonOK.Enabled = false;
             c_DateTimePickerFlightDate.Enabled = false;
-            c_DateTimePickerFlightTime.Enabled = false;
 
-            DateTime checkInDate = c_DateTimePickerFlightDate.Value.Date;
-            checkInDate += c_DateTimePickerFlightTime.Value.TimeOfDay;
-            checkInDate = checkInDate.AddDays(1); //check in 24 hours before flight.
+            DateTime checkInDate = c_DateTimePickerFlightDate.Value;
+            checkInDate = checkInDate.AddDays(-1); //check in 24 hours before flight.
+
+            DirectoryInfo dir = new DirectoryInfo(Properties.Settings.Default.ScheduledCheckInJsonDirectory);
+            if (dir.Exists == false)
+            {
+                dir.Create();
+            }
 
             //Create scheduled task and finished adding checkin info
             p_CheckIn = CheckIn.p_CreateCheckIn(
@@ -142,7 +144,7 @@ namespace SouthwestAutoCheckin
                 lastName: c_TextBoxLastName.Text,
                 confirmationCode: c_TextBoxConfirmationNumber.Text,
                 checkInDate: checkInDate,
-                dataDirectory: Properties.Settings.Default.ScheduledCheckInJsonDirectory,
+                dataDirectory: dir.FullName,
                 emailAddress: c_TextBoxEmail.Text,
                 phoneNumber: c_TextBoxPhoneNumber.Text
                 );
