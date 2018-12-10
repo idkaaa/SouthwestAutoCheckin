@@ -15,7 +15,7 @@
       <Value Profile="(Default)">input#passengerLastName</Value>
     </Setting>
     <Setting Name="ConfirmationSubmitButtonCss" Type="System.String" Scope="User">
-      <Value Profile="(Default)">button.submit-button</Value>
+      <Value Profile="(Default)">button#form-mixin--submit-button</Value>
     </Setting>
     <Setting Name="ConfirmationErrorCss" Type="System.String" Scope="User">
       <Value Profile="(Default)">div.page-error</Value>
@@ -40,6 +40,9 @@
     </Setting>
     <Setting Name="TextPhoneInputCss" Type="System.String" Scope="User">
       <Value Profile="(Default)">input#textBoardingPass</Value>
+    </Setting>
+    <Setting Name="ConfirmationSubmitButton2Css" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[data-a="airCheckInReviewResults_checkIn"]</Value>
     </Setting>
   </Settings>
 </SettingsFile>

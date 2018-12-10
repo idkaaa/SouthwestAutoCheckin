@@ -12,7 +12,7 @@ namespace SouthwestAutoCheckin.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class CheckIn : global::System.Configuration.ApplicationSettingsBase {
         
         private static CheckIn defaultInstance = ((CheckIn)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new CheckIn())));
@@ -73,7 +73,7 @@ namespace SouthwestAutoCheckin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("button.submit-button")]
+        [global::System.Configuration.DefaultSettingValueAttribute("button#form-mixin--submit-button")]
         public string ConfirmationSubmitButtonCss {
             get {
                 return ((string)(this["ConfirmationSubmitButtonCss"]));
@@ -176,6 +176,18 @@ namespace SouthwestAutoCheckin.Properties {
             }
             set {
                 this["TextPhoneInputCss"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[data-a=\"airCheckInReviewResults_checkIn\"]")]
+        public string ConfirmationSubmitButton2Css {
+            get {
+                return ((string)(this["ConfirmationSubmitButton2Css"]));
+            }
+            set {
+                this["ConfirmationSubmitButton2Css"] = value;
             }
         }
     }

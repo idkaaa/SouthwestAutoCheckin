@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NLog;
 using OpenQA.Selenium.Firefox;
+using System.Windows.Forms;
 
 namespace SouthwestAutoCheckin.Data
 {
@@ -22,7 +23,7 @@ namespace SouthwestAutoCheckin.Data
             FirefoxProfile FirefoxProfile = new FirefoxProfile();
             FirefoxBinary FirefoxPortableBinary = new FirefoxBinary(FireFoxBinaryPath);
             p_Driver = new FirefoxDriver(FirefoxPortableBinary, FirefoxProfile);
-            p_Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(3));
+            p_Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
         }
         
         /// <summary>
@@ -30,7 +31,6 @@ namespace SouthwestAutoCheckin.Data
         /// </summary>
         public void p_CloseBrowser()
         {
-            return;
             p_Driver.Quit();
         }
 
@@ -193,10 +193,17 @@ namespace SouthwestAutoCheckin.Data
                 IWebElement checkInSubmitButton =
                     f_GetWebElementByCssSelector(Settings.ConfirmationSubmitButtonCss);
                 checkInSubmitButton.Click();
+                //CLH 2018-12-11: Southwest now requires you to click two submit
+                // buttons...
+                IWebElement checkInSubmitButton2 =
+                    f_GetWebElementByCssSelector(Settings.ConfirmationSubmitButton2Css);
+                checkInSubmitButton2.Click();
             }
             catch (Exception Ex)
             {
-                Log.Error($"Failed running check in script. Reason: {Ex.Message}");
+                string error = $"Failed running check in script. Reason: {Ex.Message}";
+                Log.Error(error);
+                MessageBox.Show(error, "SouthWestAutoCheckin");
                 p_CloseBrowser();
                 return false;
             }
@@ -210,6 +217,7 @@ namespace SouthwestAutoCheckin.Data
             {
                 f_TextToPhoneConfirmation(checkIn.p_PhoneNumber);
             }
+            MessageBox.Show("Successfully checked in.", "SouthWestAutoCheckin");
             p_CloseBrowser();
             return true;
         }
